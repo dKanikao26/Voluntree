@@ -1,0 +1,67 @@
+<html>
+<head>
+
+
+
+    </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dogs.css') }}">
+<body>
+
+
+    <div class="simple">
+    <form class="reg" action="{{url_for('login')}}" method="POST">
+        <input type="text" name="fname" class="button" placeholder="Your first name"><br>
+        <br>
+        <input type="text" name="lname" class="button" placeholder="Your last name"><br><br>
+        <select class="ph" >
+        <option>+91</option>
+        <option>+92</option>
+        <option>+93</option>
+            <option>+94</option>
+
+
+
+        </select>
+        <input type="number" name="mobile" class="button" placeholder="Your mobile number"><br>
+        <br>
+
+
+
+        <input type="email" name="email" class="button" placeholder="Your email"><br>
+        <br>
+
+        <input type="password" name="pass" class="button" placeholder="Your password"><br>
+        <br>
+
+        <input type="text" name="region" class="button" placeholder="Your preferred region"><br>
+        <br>
+
+        <input type="submit" name="submit" class="sub" value ="Register" href="dog2.htm" >
+        <p class="message">  Already Registered?<a href="#" class="message2">  Log In</a> </p>
+        </form>
+        <form class="login">
+        <input type="email" name="emailR" class="button" placeholder="Your email"><br>
+        <br>
+
+        <input type="password" name="passR" class="button" placeholder="Your password"><br>
+        <br>
+        <input type="submit" class="sub" value ="Log In" href="dog2.htm" >
+        <p class="message"> Not Registered?<a href="#" class="message2">  Register</a> </p>
+
+
+        </form>
+
+
+    </div>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
+
+    <script>
+    $('.message a').click(function(){
+        $('form').animate({height:"toggle",opacity:"toggle"}, "slow" );
+    });
+    </script>
+
+    </body>
+
+</html>

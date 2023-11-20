@@ -1,0 +1,49 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<!--url('{{ post.image_url }}')-->
+<header class="masthead" style="background-image: url('https://giphy.com/clips/benandjerrys-earth-day-month-ben-and-jerrys-95djVSddTlIE4ALf3a') ">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>{{ post['Title'] }}</h1>
+                    <h2 class="subheading">{{ post['Location'] }}</h2>
+                    <span class="meta">Posted by
+                        <a href="#">{{ post['User'] }}</a>
+                        on {{ post['Date'][2] }} - {{ post['Date'][1] }} - {{ post['Date'][0] }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>{{ post['Desc'] }}</p>
+                <h6><a href="tel:{{post['Phone number']}}">Click me to call organizer</a></h6>
+                <h6><a href="mailto:{{post['Email']}}">Click me to mail organizer</a></h6>
+            </div>
+        </div>
+    </div>
+</article>
+<!--  <div class="container my-3">-->
+<!--        <h2>Discussion Zone</h2>-->
+<!--        <form action="/" method="POST">-->
+<!--            <div class="mb-3">-->
+<!--              <label for="title" class="form-label">Your Name</label>-->
+<!--              <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--              <label for="desc" class="form-label">Start a discussion</label>-->
+<!--              <input type="text" class="form-control" name="desc" id="desc">-->
+<!--            </div>-->
+
+<!--            <button type="submit" class="btn btn-dark">Submit</button>-->
+<!--          </form>-->
+<!--    </div>-->
+{% include "footer.html" %}

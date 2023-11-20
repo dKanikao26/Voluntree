@@ -1,0 +1,143 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/about-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          {% if msg_sent: %}
+          <h1>Post uploaded!</h1>
+          <span class="subheading">Congratulations!!</span>
+          <span class="subheading">Fill again to create more posts</span>
+          {% else: %}
+          <h1>Create a post</h1>
+          <span class="subheading">Fill in the details</span>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <p>
+          Give us the following details
+        </p>
+        <div class="my-5">
+          <!-- * * * * * * * * * * * * * * *-->
+          <!-- * * Simplified SB Contact Form for the Tutorial* *-->
+          <form
+            id="contactForm"
+            name="sentMessage"
+            action="{{ url_for('post') }}"
+            method="post"
+          >
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name..."
+                required
+              />
+              <label for="name">Name</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="State"
+                name="State"
+                type="text"
+                placeholder="Mention the state"
+                required
+              />
+              <label for="State">State</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="Date"
+                name="Date"
+                type="date"
+                required
+              />
+              <label for="Date">Date of an event</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="Phno"
+                name="Phno"
+                type="tel"
+                required
+              />
+              <label for="Phno">Enter your phone number</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="email"
+                name="email"
+                type="email"
+                required
+              />
+              <label for="email">Enter your email id</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="address"
+                name="address"
+                type="text"
+                required
+              />
+              <label for="address">Enter the location</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                class="form-control"
+                id="Title"
+                name="Title"
+                type="text"
+                placeholder="Enter title of this post"
+                required
+              />
+              <label for="Title">Title</label>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+                placeholder="Enter description here...(Don't use a slash)"
+                required
+                style="height: 12rem"
+              ></textarea>
+              <label for="description">description</label>
+            </div>
+            <br />
+            <button
+              class="btn btn-primary text-uppercase"
+              id="submitButton"
+              type="submit"
+            >
+              Post
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "footer.html" %}

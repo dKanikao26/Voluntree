@@ -1,0 +1,81 @@
+
+body{
+    background:url(l.jpg);
+    
+    background-size: 100% 700px;
+}
+
+.simple{
+    text-align: center;
+    margin: 100px 400px;
+    
+}
+
+.reg{
+    width: 100%;
+    padding: 50px 0px;
+    background-color: .d7f8f7;
+    opacity: 0.8;
+}
+
+.button{
+    width: 250px;
+    padding: 10px;
+    
+    border-radius: 10px;
+     
+}
+.button:hover{
+    border-color: cornflowerblue;
+    
+}
+.ph{
+    width: 70px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    font-family: fantasy;
+}
+
+.sub{
+    width: 300px;
+    border-radius: 15px;
+    background-color: .eaa81b;
+    height:50px;
+   
+    font-size: 19px;
+    border-color: .1a2c5b;
+    font-weight: bold;
+    box-shadow: 10px;
+}
+.sub:hover{
+    color: deepskyblue;
+}
+.login{
+    width: 100%;
+    padding: 50px 0px;
+    background-color: .d7f8f7;
+    opacity: 0.8;
+}
+.reg{
+    display: none;
+}
+.message{
+    
+    font-size: 15px;
+   
+}
+.message2{
+    font-size: 15px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.d{
+    width:1350px;
+    height:80px;
+    font-family: monospace;
+    color: black;
+    font-weight: bolder;
+    font-size: 50px;
+    
+}
